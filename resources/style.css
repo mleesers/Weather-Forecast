@@ -1,7 +1,7 @@
-.bg-custom-2 {
-  background-image: linear-gradient(15deg, #081720 0%, #4086af 100%);
+header {
+  background-image: linear-gradient(15deg, #4086af 0%, #081720 100%);
   margin: none;
-  padding: 15px;
+  padding: 25px;
   text-align: center;
   width: 100%;
   vertical-align: top;
@@ -11,8 +11,8 @@
   font-weight: bold;
 }
 .stretch-card>.card {
-    width: 100%;
-    min-width: 100%
+    width: 50%;
+    min-width: 50%
 }
 
 body {
@@ -48,7 +48,7 @@ body {
 
 .card {
     border: 0;
-    border-radius: 2px
+    border-radius: 2px;
 }
 
 .card-weather {
@@ -65,25 +65,22 @@ body {
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem
-}
-
-.card-weather .card-body:first-child {
-    background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1557323760/weather.svg) no-repeat center;
-    background-size: cover
+    border-radius: 0.25rem;
+    margin-left:250px;
 }
 
 .card .card-body {
-    padding: 1.88rem 1.81rem
+    padding: 1.88rem 1.81rem;
 }
 
 .card-body {
     flex: 1 1 auto;
-    padding: 1.25rem
+    padding: 1.25rem;
 }
 
 .card-weather .weather-date-location {
     padding: 0 0 38px
+
 }
 
 .h3,
@@ -103,16 +100,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Poppins", sans-serif;
+    font-family: Helvetica;
     font-weight: 500
 }
 
 .text-gray,
 .card-subtitle,
-.new-accounts ul.chats li.chat-persons a p.joined-date {
-    color: #969696
-}
-
 p {
     font-size: 13px
 }
@@ -140,12 +133,12 @@ p {
     background: #ffffff
 }
 
-.card-weather .weakly-weather {
+.card-weather .weekly-weather {
     background: #ffffff;
     overflow-x: auto
 }
 
-.card-weather .weakly-weather .weakly-weather-item {
+.card-weather .weekly-weather .weekly-weather-item {
     flex: 0 0 14.28%;
     border-right: 1px solid #f2f2f2;
     padding: 1rem;
@@ -157,6 +150,87 @@ p {
     margin-bottom: 0 !important
 }
 
-.card-weather .weakly-weather .weakly-weather-item i {
-    font-size: 1.2rem
+.card-weather .weekly-weather .weekly-weather-item i {
+    font-size: 1.2rem;
 }
+h2 {
+    font-weight: bold;
+    font-family: Helvetica;
+    font-size: 20px;
+}
+.sidenav {
+    margin-right: 10px;
+    text-align: center;
+    margin-top: 75px;
+    height: 100%; 
+    width: 300px; 
+    position: fixed; 
+    z-index: 1;
+    top: 0; 
+    left: 0;
+    background-color: white; 
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+input{
+    width: 90%;
+    padding: 6px;
+    color:rgb(158, 154, 154);
+    margin-bottom: 10px;
+}
+.search{
+    padding: 5px;
+    width: 90%;
+    background-color: #4086af;
+    color:whitesmoke;
+    font-size:18px;
+    font-family:Helvetica;
+    border: none;
+    border-radius:3px;
+    margin-bottom: 15px;
+}
+.results{
+    border:none;
+}
+.result{
+    padding: 5px;
+    width: 90%;
+    align-items: center;
+    background-color: rgb(121, 121, 121);
+    font-family: Helvetica;
+    font-size:18px;
+    border: none;
+    border-radius:3px;
+    margin-bottom: 15px;
+}
+.result:hover{
+    background-color: rgb(158, 158, 158);
+}
+
+form{
+    border-bottom: 1px solid gray;
+    margin-bottom: 15px; 
+}
+  .sidenav h1 {
+    text-align:left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-family: Helvetica;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    display: block;
+  }
+  
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  
+  
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
