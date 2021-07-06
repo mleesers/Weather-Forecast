@@ -11,8 +11,8 @@ header {
   font-weight: bold;
 }
 .stretch-card>.card {
-    width: 75%;
-    min-width: 75%
+    width: 85%;
+    min-width: 85%
 }
 
 body {
@@ -72,14 +72,9 @@ body {
     background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1557323760/weather.svg) no-repeat center;
     background-size: cover
 }
-.card .card-body {
-    padding: 1.88rem 1.81rem;
-}
 
-.card-body {
-    flex: 1 1 auto;
-    padding: 1.25rem;
-}
+
+
 
 .date .city {
     padding: 0 0 38px;
@@ -96,17 +91,19 @@ h3 {
 .h2,
 .h3,
 .h4,
-.h5,
 .h6,
 h1,
 h2,
 h4,
-h5,
 h6 {
     font-family: Helvetica;
     font-weight: 500
 }
-
+h5{
+    font-size: 45px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
 .text-gray,
 .card-subtitle,
 p {
@@ -250,3 +247,15 @@ form{
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+.card1{
+    display:flex;
+    width:200px;
+    display:inline-block;
+    margin-left: 10px;
+    background-color: #0d344d;
+    color:rgb(199, 206, 212);
+    line-height: 50px;
+    margin-bottom: 25px;
+ }
+
