@@ -1,6 +1,9 @@
 today = moment();
 document.querySelector(".date").textContent = " (" + today.format("M/D/YYYY") + ")";
-
+for(i=1;i<=5;i++){
+    date = today.add(1,'days');
+    document.getElementById("date"+i).textContent = date.format("M/D/YYYY");
+}
 
 
 
