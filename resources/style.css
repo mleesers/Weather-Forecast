@@ -11,8 +11,8 @@ header {
   font-weight: bold;
 }
 .stretch-card>.card {
-    width: 50%;
-    min-width: 50%
+    width: 75%;
+    min-width: 75%
 }
 
 body {
@@ -78,8 +78,9 @@ body {
     padding: 1.25rem;
 }
 
-.card-weather .weather-date-location {
-    padding: 0 0 38px
+.date .city {
+    padding: 0 0 38px;
+    font-weight:bold;
 
 }
 
@@ -117,7 +118,10 @@ p {
 }
 
 .card-weather .weather-data {
-    padding: 0 0 4.75rem
+    padding: 0 0 4.75rem;
+    line-height: 50px;
+    font-family:Helvetica;
+
 }
 
 .mr-auto,
