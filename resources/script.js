@@ -1,9 +1,3 @@
-city = ""
-lati = ""
-long = ""
-requestUrlSecondary = `https://api.openweathermap.org/data/2.5/onecall?lat=${lati}&lon=${long}&exclude=alerts&appid=0a1489eac7ff07297a4595ebe061c3c8`
-
-
 function getApi(){
     city = document.getElementById("city").value;
     requestUrlMain = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0a1489eac7ff07297a4595ebe061c3c8`
@@ -21,9 +15,20 @@ function getApi(){
         document.getElementById("humidity").textContent = "Humidity: " + data.main.humidity;
         lati = data.coord.lat;
         long = data.coord.lon;
-        console.log(data)
+        requestUrlSecondary = `https://api.openweathermap.org/data/2.5/onecall?lat=${lati}&lon=${long}&exclude=alerts,minutely,hourly&appid=0a1489eac7ff07297a4595ebe061c3c8`
+        getSecondApi();
+        return requestUrlSecondary;
     });
-    return lati,long;
+    
 }
-
+function getSecondApi(){
+    fetch(requestUrlSecondary)
+    .then(function (response){
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+        document.getElementById("UV").textContent = "UV index: " + data.current.uvi;
+    });
+}
 document.querySelector(".search").addEventListener("click", getApi);

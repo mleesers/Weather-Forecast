@@ -86,6 +86,7 @@ body {
 .h3,
 h3 {
     font-size: 45px;
+    margin-bottom: 20px;
 }
 
 .h1,
@@ -117,7 +118,7 @@ p {
 
 .card-weather .weather-data {
     padding: 0 0 4.75rem;
-    line-height: 50px;
+    line-height: 75px;
     font-family:Helvetica;
     font-size: 30px;
 
