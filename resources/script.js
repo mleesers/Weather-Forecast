@@ -1,3 +1,11 @@
+today = moment();
+document.querySelector(".date").textContent = " (" + today.format("M/D/YYYY") + ")";
+
+
+
+
+
+
 function getApi(){
     city = document.getElementById("city").value;
     requestUrlMain = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0a1489eac7ff07297a4595ebe061c3c8`
