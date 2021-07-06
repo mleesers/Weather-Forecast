@@ -6,7 +6,7 @@ header {
   width: 100%;
   vertical-align: top;
   color:rgb(199, 206, 212);
-  font-size: 25px;
+  font-size: 45px;
   font-family: Helvetica;
   font-weight: bold;
 }
@@ -81,12 +81,11 @@ body {
 .date .city {
     padding: 0 0 38px;
     font-weight:bold;
-
 }
 
 .h3,
 h3 {
-    font-size: 1.56rem
+    font-size: 45px;
 }
 
 .h1,
@@ -97,7 +96,6 @@ h3 {
 .h6,
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -121,6 +119,7 @@ p {
     padding: 0 0 4.75rem;
     line-height: 50px;
     font-family:Helvetica;
+    font-size: 30px;
 
 }
 
@@ -148,7 +147,10 @@ p {
     padding: 1rem;
     text-align: center
 }
-
+.weather-date-location {
+    font-family: Helvetica;
+    font-weight: bold;
+  }
 .mb-0,
 .my-0 {
     margin-bottom: 0 !important
@@ -165,7 +167,7 @@ h2 {
 .sidenav {
     margin-right: 10px;
     text-align: center;
-    margin-top: 75px;
+    margin-top: 100px;
     height: 100%; 
     width: 300px; 
     position: fixed; 
@@ -193,8 +195,14 @@ input{
     border-radius:3px;
     margin-bottom: 15px;
 }
+.search:hover{
+    background-color: #81bbdd;
+}
 .results{
     border:none;
+}
+p{
+    font-size: 25px;
 }
 .result{
     padding: 5px;
