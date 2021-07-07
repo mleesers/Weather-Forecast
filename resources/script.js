@@ -1,4 +1,11 @@
 today = moment();
+cityArray = [];
+
+
+
+
+
+
 document.querySelector(".date").textContent = " (" + today.format("M/D/YYYY") + ")";
 for(i=1;i<=5;i++){
     date = today.add(1,'days');
@@ -39,11 +46,20 @@ function getSecondApi(){
         document.getElementById("UV").textContent = "UV index: " + data.current.uvi;
         for(i=0;i<5;i++){
             temperature = ((data.daily[i].temp.max -273.15) * (9/5) + 32);
-            console.log(temperature)
             document.getElementById("temp" + (i+1)).textContent = "Temp: " + temperature.toFixed(2) + "\u00B0F";
             document.getElementById("wind" + (i+1)).textContent = "Wind: " + data.daily[i].wind_speed + "mph";
             document.getElementById("humidity" + (i+1)).textContent = "Humidity: " + data.daily[i].humidity + "%";
         }
     });
 }
-document.querySelector(".search").addEventListener("click", getApi);
+document.querySelector(".search").addEventListener("click", function(){
+    getApi();
+    city = document.getElementById("city").value;
+    console.log(city);
+    if(!cityArray.includes(city)){
+        cityArray.push(city);   
+    }else{
+        window.alert("That city has already been entered");
+    }
+    console.log(cityArray)
+});
