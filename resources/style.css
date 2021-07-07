@@ -207,6 +207,8 @@ p{
 }
 .result{
     padding: 5px;
+    display:flex;
+    justify-content: center;
     width: 90%;
     align-items: center;
     background-color: rgb(121, 121, 121);
@@ -215,6 +217,7 @@ p{
     border: none;
     border-radius:3px;
     margin-bottom: 15px;
+    display:block;
 }
 .result:hover{
     background-color: rgb(158, 158, 158);
