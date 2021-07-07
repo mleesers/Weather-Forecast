@@ -1,17 +1,14 @@
 today = moment();
 cityArray = [];
-
-
-
-
-
-
 document.querySelector(".date").textContent = " (" + today.format("M/D/YYYY") + ")";
 for(i=1;i<=5;i++){
     date = today.add(1,'days');
     document.getElementById("date"+i).textContent = date.format("M/D/YYYY");
 }
-
+function localStore(){
+    localStorage.setItem("cityArray",JSON.stringify(cityArray));
+    storedCities = JSON.parse(localStorage.getItem("cityArray"))
+}
 
 
 
@@ -61,5 +58,5 @@ document.querySelector(".search").addEventListener("click", function(){
     }else{
         window.alert("That city has already been entered");
     }
-    console.log(cityArray)
+    localStore();
 });
