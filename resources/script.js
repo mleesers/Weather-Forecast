@@ -102,10 +102,9 @@ document.querySelector(".search").addEventListener("click", function(){
     city = document.getElementById("city").value;
     if(!cityArray.includes(city)){
         cityArray.push(city);
-
+        localStore(city);
     }else{
         window.alert("That city has already been entered");
     }
-    localStore(city);
     
 });
