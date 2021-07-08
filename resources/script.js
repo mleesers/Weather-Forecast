@@ -15,37 +15,31 @@ function localStore(){
             btn.innerHTML = city;
             btn.setAttribute('class','result');
             btn.setAttribute('id', city);
+            if(btn){
+                btn.addEventListener('click', function(event){
+                    event.preventDefault();
+                    city = btn.id;
+                    buttonApi(city)
+                })
+            }
             document.querySelector(".results").appendChild(btn);
             arr.push(city);
         }else{
             continue;
         }
     }
-    createEventListener(arr);
 }
 
-function createEventListener(){
-    lastItem = arr[arr.length-1]
-    ind = arr.indexOf(lastItem)
-    for(i=0;i<arr.length;i++){
-        butt = document.getElementById(arr[ind]).textContent;
-        document.getElementById(butt).addEventListener("click",function(event){
-            buttonApi(butt);
-            event.preventDefault();
-        });
-    }
-}
-    
 
 function buttonApi(){
-    city = document.getElementsById(butt).textContent;
-    console.log(city);
+    
     requestUrlMain = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0a1489eac7ff07297a4595ebe061c3c8`
     fetch(requestUrlMain)
     .then(function (response){
         return response.json();
     })
     .then(function (data) {
+        console.log(data)
         document.querySelector(".City").textContent = data.name;
         temperature = ((data.main.temp -273.15) * (9/5) + 32);
         document.getElementById("temp").textContent = "Temp: " + temperature.toFixed(2) + "\u00B0F";
@@ -104,7 +98,7 @@ document.querySelector(".search").addEventListener("click", function(){
         cityArray.push(city);
         localStore(city);
     }else{
-        window.alert("That city has already been entered");
+        console.log("nothing to see here")
     }
     
 });
